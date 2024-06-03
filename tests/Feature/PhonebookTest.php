@@ -17,4 +17,20 @@ class PhonebookTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function it_adds_contact(): void
+    {
+    }
+
+    public function it_updates_contact(): void
+    {
+    }
+
+    public function it_deletes_contact(): void
+    {
+    }
+
+    public function it_searches_contact_by_last_name(): void
+    {
+    }
 }
