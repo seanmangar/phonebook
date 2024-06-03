@@ -20,7 +20,7 @@ import ResponsiveNavLink from "@/Components/ResponsiveNavLink.vue";
                 </div>
 
                 <div class="mt-12 bg-white overflow-hidden shadow-sm sm:rounded-lg w-1/4">
-                    <ResponsiveNavLink :href="route('phonebook.index')">Access phonebook app </ResponsiveNavLink>
+                    <ResponsiveNavLink :href="route('contact.index')">Access phonebook app </ResponsiveNavLink>
                 </div>
             </div>
         </div>

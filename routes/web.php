@@ -23,7 +23,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/phonebook', [\App\Http\Controllers\PhonebookController::class, 'index'])->name('phonebook.index');
+    Route::get('/contacts', [\App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
 });
 
 require __DIR__.'/auth.php';
