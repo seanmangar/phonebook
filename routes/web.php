@@ -24,8 +24,14 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::get('/contacts', [\App\Http\Controllers\ContactController::class, 'index'])->name('contact.index');
-    Route::post('/contacts', [\App\Http\Controllers\ContactController::class, 'create'])->name('contact.create');
+    Route::get('/contacts/create', [\App\Http\Controllers\ContactController::class, 'create'])->name('contact.create');
+    Route::post('/contacts', [\App\Http\Controllers\ContactController::class, 'store'])->name('contact.store');
+    Route::get('/contacts/{contact}/edit', [\App\Http\Controllers\ContactController::class, 'edit'])->name('contact.edit');
+    Route::post('/contacts/{contact}', [\App\Http\Controllers\ContactController::class, 'update'])->name('contact.update');
     Route::delete('/contacts/{contact}', [\App\Http\Controllers\ContactController::class, 'destroy'])->name('contact.destroy');
+
+    Route::get('/contacts-search', [\App\Http\Controllers\ContactController::class, 'searchPage'])->name('contact.search-page');
+    Route::post('/contacts-search', [\App\Http\Controllers\ContactController::class, 'search'])->name('contact.search');
 });
 
 require __DIR__.'/auth.php';

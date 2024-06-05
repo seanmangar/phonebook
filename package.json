@@ -18,5 +18,7 @@
         "vue": "^3.4.0"
     },
     "dependencies": {
+        "@meilisearch/instant-meilisearch": "^0.18.1",
+        "vue-instantsearch": "^4.17.2"
     }
 }
